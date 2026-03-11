@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grid-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  overflow-x: hidden;
+  /* 确保全局应用 Neue Machina 风格 */
+  font-family: "Neue Machina", "Space Grotesk", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Neue Machina", "Space Grotesk", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.grid-line-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--grid-color);
+}
+
+.grid-line-h {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--grid-color);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0px;
+}
+
+body.is-scrolling *::-webkit-scrollbar-thumb,
+body.is-scrolling::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
+
+body.is-scrolling *::-webkit-scrollbar-thumb:hover,
+body.is-scrolling::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Neue Machina 字体细节修正 */
+.font-machina {
+  font-variant-ligatures: no-common-ligatures;
+  letter-spacing: -0.04em;
+}
